@@ -5,7 +5,7 @@ class StatusScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text(
         "Status",
         style: TextStyle(fontSize: 20),

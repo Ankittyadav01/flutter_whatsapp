@@ -5,7 +5,10 @@ import 'pages/chat_screen.dart';
 import 'pages/status_screen.dart';
 
 class FlutterBookHome extends StatefulWidget {
+  const FlutterBookHome({Key? key}) : super(key: key);
+
   @override
+  // ignore: library_private_types_in_public_api
   _FlutterBookHomeState createState() => _FlutterBookHomeState();
 }
 
@@ -16,45 +19,48 @@ class _FlutterBookHomeState extends State<FlutterBookHome>
   @override
   void initState() {
     super.initState();
-    _tabController = new TabController(vsync: this, initialIndex: 1, length: 4);
+    _tabController = TabController(vsync: this, initialIndex: 1, length: 4);
   }
 
+  @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-            title: Text("FlutterBook"),
+            title: const Text("FlutterBook"),
             elevation: 0.7,
-            bottom: TabBar(
-                controller: _tabController,
-                indicatorColor: Colors.white,
-                tabs: <Widget>[
-                  Tab(icon: Icon(Icons.camera_alt)),
-                  Tab(text: ("CHATS")),
-                  Tab(
+            bottom:
+                TabBar(controller: _tabController, indicatorColor: Colors.white,
+                    // ignore: prefer_const_literals_to_create_immutables
+                    tabs: <Widget>[
+                  const Tab(icon: Icon(Icons.camera_alt)),
+                  const Tab(text: ("CHATS")),
+                  const Tab(
                     text: "STATUS",
                   ),
-                  Tab(
+                  const Tab(
                     text: "STATUS",
                   )
                 ]),
+            // ignore: prefer_const_literals_to_create_immutables
             actions: [
-              Icon(Icons.search),
-              Padding(padding: EdgeInsets.symmetric(horizontal: 5.0)),
-              Icon(Icons.more_vert)
+              const Icon(Icons.search),
+              const Padding(padding: EdgeInsets.symmetric(horizontal: 5.0)),
+              const Icon(Icons.more_vert)
             ]),
         body: TabBarView(
           controller: _tabController,
-          children: <Widget>[
+          children: const <Widget>[
             CameraScreen(),
             ChatScreen(),
             StatusScreen(),
             CallsScreen(),
           ],
         ),
-        floatingActionButton: new FloatingActionButton(
-            backgroundColor: Theme.of(context).accentColor,
+        floatingActionButton: FloatingActionButton(
+            backgroundColor: Theme.of(context).colorScheme.secondary,
+            // ignore: avoid_print
             onPressed: () => print("AddContent")),
       ),
     );

@@ -11,11 +11,14 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 2), () => print("Splash Done"));
+    // ignore: avoid_print
+    Timer(const Duration(seconds: 2), () => print("Splash Done"));
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
@@ -23,43 +26,42 @@ class _SplashScreenState extends State<SplashScreen> {
         children: <Widget>[
           Container(
               decoration:
-                  BoxDecoration(color: Color.fromARGB(255, 44, 90, 28))),
+                  const BoxDecoration(color: Color.fromARGB(255, 44, 90, 28))),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
                 flex: 2,
-                child: Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CircleAvatar(
-                          backgroundColor: Colors.white,
-                          radius: 60.0,
-                          child: Icon(
-                            Icons.chat,
-                            color: Color.fromARGB(255, 44, 90, 28),
-                            size: 50.0,
-                          )),
-                      Padding(
-                        padding: EdgeInsets.only(top: 10.0),
-                      ),
-                      Text(
-                        "Flutter Book",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24.0,
-                            fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    const CircleAvatar(
+                        backgroundColor: Colors.white,
+                        radius: 60.0,
+                        child: Icon(
+                          Icons.chat,
+                          color: Color.fromARGB(255, 44, 90, 28),
+                          size: 50.0,
+                        )),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 10.0),
+                    ),
+                    const Text(
+                      "Flutter Book",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
                 ),
               ),
-              new Expanded(
+              Expanded(
                 flex: 1,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     CircularProgressIndicator(),
                     Padding(
                       padding: EdgeInsets.only(top: 20.0),

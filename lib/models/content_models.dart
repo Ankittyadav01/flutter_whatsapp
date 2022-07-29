@@ -1,45 +1,55 @@
-class ContentModel {
-  String name;
-  String message;
-  String time;
-  String avatarUrl;
+class Questions {
+  final String id, image, title, description, time, solution, code, output;
 
-  ContentModel(
-      {required this.name,
-      required this.message,
-      required this.time,
-      required this.avatarUrl});
+  Questions({
+    required this.id,
+    required this.image,
+    required this.title,
+    required this.description,
+    required this.time,
+    required this.solution,
+    required this.code,
+    required this.output,
+  });
 }
 
-List<ContentModel> data = [
-  ContentModel(
-      name: "Ankit Yadav",
-      message: "Hii",
-      time: "23:59",
-      avatarUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"),
-  ContentModel(
-      name: "Contain Duplicate",
-      message: "contain_duplicate",
-      time: "23:59",
-      avatarUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"),
-  ContentModel(
-      name: "Intersection",
-      message: "intersection",
-      time: "23:59",
-      avatarUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"),
-  ContentModel(
-      name: "SingleNumber136",
-      message: "single_number_136",
-      time: "23:59",
-      avatarUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"),
-  ContentModel(
-      name: "Two Sums",
-      message: "two_sums",
-      time: "23:59",
-      avatarUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"),
+List data = [
+  Questions(
+      id: "1",
+      image: "assets/images/bag_1.png",
+      title: "Office Code",
+      time: "2",
+      description: dummyText,
+      solution: "solution",
+      code: "print(code)",
+      output: "ans"),
+  Questions(
+      id: "2",
+      image: "assets/images/bag_1.png",
+      title: "Office Code",
+      time: "2",
+      description: dummyText,
+      solution: "solution",
+      code: "print(code)",
+      output: "ans"),
+  Questions(
+      id: "3",
+      image: "assets/images/bag_1.png",
+      title: "Incriment chrck",
+      time: "2:66 pm",
+      description: dummyText,
+      solution: "solution",
+      code: "print(code)",
+      output: "ans"),
+  Questions(
+      id: "4",
+      image: "assets/images/bag_1.png",
+      title: "Office Code",
+      time: "2",
+      description: dummyText,
+      solution: "solution",
+      code: "print(code)",
+      output: "ans"),
 ];
+
+String dummyText = "this is leetcode problem solution application";
