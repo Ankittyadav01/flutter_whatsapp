@@ -13,11 +13,11 @@ class Questions {
   });
 }
 
-List data = [
+List<Questions> data = [
   Questions(
       id: "1",
       image: "assets/images/bag_1.png",
-      title: "Office Code",
+      title: "Office Code1",
       time: "2",
       description: dummyText,
       solution: "solution",
@@ -26,7 +26,7 @@ List data = [
   Questions(
       id: "2",
       image: "assets/images/bag_1.png",
-      title: "Office Code",
+      title: "Office Code2",
       time: "2",
       description: dummyText,
       solution: "solution",
@@ -35,7 +35,7 @@ List data = [
   Questions(
       id: "3",
       image: "assets/images/bag_1.png",
-      title: "Incriment chrck",
+      title: "Incriment check",
       time: "2:66 pm",
       description: dummyText,
       solution: "solution",
