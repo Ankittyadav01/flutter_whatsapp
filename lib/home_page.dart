@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_book/models/content_models.dart';
-import 'package:flutter_book/pages/details_page.dart';
 import 'pages/calls_screen.dart';
 import 'pages/camera_screen.dart';
 import 'pages/chat_screen.dart';
 import 'pages/status_screen.dart';
-import 'package:flutter_book/models/content_models.dart';
-import 'package:flutter_book/pages/details_page.dart';
-import '../models/content_models.dart';
+import 'pages/content_page.dart';
 
-class FlutterBookHome extends StatefulWidget {
-  const FlutterBookHome({Key? key}) : super(key: key);
+class AppHomePage extends StatefulWidget {
+  const AppHomePage({Key? key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
-  _FlutterBookHomeState createState() => _FlutterBookHomeState();
+  _AppHomePageState createState() => _AppHomePageState();
 }
 
-class _FlutterBookHomeState extends State<FlutterBookHome>
+class _AppHomePageState extends State<AppHomePage>
     with SingleTickerProviderStateMixin {
   late final TabController _tabController;
 
@@ -70,7 +66,7 @@ class _FlutterBookHomeState extends State<FlutterBookHome>
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 var index = 1;
-                return DetailsScreen(data[index]);
+                return ContentPage();
               }));
             },
           ),
